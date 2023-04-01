@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tic-Tac-Toe</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper white-text">
+                <a href="#" class="brand-logo center hide-on-med-and-down">Tic-Tac-Toe</a>
+                <ul id="nav-mobile" class="left">
+                    <li><a onclick="showCreateScreen()"><i class="material-icons left">add_circle_outline</i>Create</a></li>
+                    <li><a onclick="showConnectScreen()"><i class="material-icons left">power</i>Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="create-section" class="container center-align">
+        <h1>Welcome to the Tic-tac-toe</h1>
+        <div id="create__tags-input" class="chips chips-placeholder left-align white-text"></div>
+        <a class="btn-large transparent" onclick="createGame()"><i class="material-icons left">add_circle</i>Create game</a>
+    </section>
+
+    <section id="connect-section" class="container center-align hide">
+        <h1>Select a game to connect</h1>
+        <div id="connect__tags-input" class="chips chips-placeholder left-align white-text"></div>
+
+        <div class="container" id="games-list"></div>
+    </section>
+
+    <section id="game-section" class="hide">
+        <div class="center-align">
+            <h1>Tic-tac-toe</h1>
+            <p>Game ID: <span id="game-id"></span></p>
+        </div>
+        <div id="gameboard">
+            <div class="line r r-1"></div>
+            <div class="line r r-2"></div>
+            <div class="line c c-1"></div>
+            <div class="line c c-2"></div>
+        </div>
+        <div class="container">
+            <div id="num-of-players" class="row">
+                <div class="col s4 center-align" id="playerX"></div>
+                <div class="col s4 center-align"><b>X-VS-O</b></div>
+                <div class="col s4 center-align" id="playerO"></div>
+            </div>
+        </div>
+
+        <div id="gameover-msg">
+            <h3 id="winner"></h3>
+        </div>
+    </section>
+
+
+
+
+    <!-- Tic-tac-toe link: https://codepen.io/geoffbuell/pen/mdRjPwe -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@microsoft/signalr@3.1.0/dist/browser/signalr.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="js/tictactoeGameManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
